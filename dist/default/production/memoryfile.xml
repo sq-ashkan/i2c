@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="dist/default/production/LCD_Test.X.production.elf">                 
+  <executable name="dist/default/production/i2c.production.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>262144</length>                 
-      <used>4707</used>                     
-      <free>257437</free>                     
+      <used>4708</used>                     
+      <free>257436</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 
       <length>8192</length>                 
-      <used>45</used>                     
-      <free>8147</free>                     
+      <used>46</used>                     
+      <free>8146</free>                     
     </memory>                              
   </executable>                            
 </project>                                 
