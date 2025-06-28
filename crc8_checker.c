@@ -59,10 +59,11 @@ uint8_t crc8_calculate(const uint8_t *data, size_t length)
 // Calculate CRC-8 for serial number (24-bit)
 uint8_t crc8_calculate_serial(uint32_t serial_number, uint8_t num_bytes)
 {
-    uint8_t data[3];
-    data[0] = (serial_number >> 16) & 0xFF;
-    data[1] = (serial_number >> 8) & 0xFF;
-    data[2] = serial_number & 0xFF;
+    uint8_t data[4];
+    data[0] = (serial_number >> 24) & 0xFF;
+    data[1] = (serial_number >> 16) & 0xFF;
+    data[2] = (serial_number >> 8) & 0xFF;
+    data[3] = serial_number & 0xFF;
 
     return crc8_calculate(data, num_bytes);
 }
