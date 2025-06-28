@@ -102,7 +102,7 @@ uint32_t read_htu31_serial_number_with_crc(void)
     twi_write(HTU31_READ_SERIAL);  // 0x0A command
     twi_stop();
 
-    _delay_ms(10); // Warten für Sensor
+    _delay_ms(60); // Warten für Sensor
 
     // Serial Number lesen (4 bytes)
     twi_start((HTU31_ADDRESS << 1) | 1); // Read
@@ -125,7 +125,7 @@ int main(void)
 {
     char buffer[32];
 
-    // Initialisierung
+    // Initialize TWI/I2C interface
     twi_init();
     _delay_ms(100);
 
@@ -133,18 +133,86 @@ int main(void)
     // Task one: Serial Number lesen
     // *****
     uint32_t full_data = read_htu31_serial_number_with_crc();
-    uint32_t serial_number = full_data >> 8;
-    uint8_t crc_received = full_data & 0xFF;
+    uint32_t serial_number = full_data >> 8; // Extract 24-bit serial number
+    uint8_t crc_received = full_data & 0xFF; // Extract CRC byte
 
-    sprintf(buffer, "SN: %lu", serial_number); // Format
-    lcd_text_handler(buffer);                  // display
-    _delay_ms(3000);
+    sprintf(buffer, "SN: %lu", serial_number); // Format serial number for display
+    lcd_text_handler(buffer);                  // Show on LCD
+    _delay_ms(3000);                           // Wait 3 seconds
 
     // *****
     // Task Two: CRC Check
     // *****
-    uint8_t calculated_crc = crc8_calculate_serial(serial_number , 3);
+    uint8_t calculated_crc = crc8_calculate_serial(serial_number, 3); // Calculate CRC for 3 bytes
     calculated_crc == crc_received ? lcd_text_handler("CRC OK") : lcd_text_handler("CRC failed");
+    _delay_ms(2000); // Wait 2 seconds
+
+    // *****
+    // Task Three: Temperature and Humidity Reading
+    // *****
+
+    // Send conversion command with OSR=2 for both T and RH
+    twi_start(HTU31_ADDRESS << 1); // Start I2C with write mode
+    twi_write(0x54);               // Conversion command: 01010100 (OSR_RH=2, OSR_T=2)
+    twi_stop();                    // Stop I2C
+    _delay_ms(60);                 // Wait for conversion to complete
+
+    // Send read command
+    twi_start(HTU31_ADDRESS << 1); // Start I2C with write mode
+    twi_write(0x00);               // Read T & RH command
+    twi_stop();                    // Stop I2C
+    _delay_ms(1000);               // Small delay before reading
+
+    // read command
+    twi_start((HTU31_ADDRESS << 1) | 1); // Start I2C with read mode // Read temperature and humidity data
+
+    uint8_t temp_msb = twi_read_ack(); // Temperature high byte
+    uint8_t temp_lsb = twi_read_ack(); // Temperature low byte
+    uint8_t temp_crc = twi_read_ack(); // Temperature CRC
+
+    uint8_t hum_msb = twi_read_ack();  // Humidity high byte
+    uint8_t hum_lsb = twi_read_ack();  // Humidity low byte
+    uint8_t hum_crc = twi_read_nack(); // Humidity CRC (last byte with NACK)
+
+    twi_stop(); // Stop I2C
+
+    // Combine bytes to 16-bit values
+    uint16_t temp_raw = ((uint16_t)temp_msb << 8) | temp_lsb; // Combine temperature bytes
+    uint16_t hum_raw = ((uint16_t)hum_msb << 8) | hum_lsb;    // Combine humidity bytes
+
+    sprintf(buffer, "T_RAW: %u", temp_raw);
+    lcd_text_handler(buffer);
+    _delay_ms(2000);
+
+    sprintf(buffer, "H_RAW: %u", hum_raw);
+    lcd_text_handler(buffer);
+    _delay_ms(2000);
+
+    // Check temperature CRC
+    uint8_t temp_data[2] = {temp_msb, temp_lsb};
+    uint8_t calc_temp_crc = crc8_calculate(temp_data, 2);
+    calc_temp_crc == temp_crc ? lcd_text_handler("Temp CRC: OK") : lcd_text_handler("Temp CRC: FAIL");
+    _delay_ms(2000);
+
+    // Check humidity CRC
+    uint8_t hum_data[2] = {hum_msb, hum_lsb};
+    uint8_t calc_hum_crc = crc8_calculate(hum_data, 2);
+    calc_hum_crc == hum_crc ? lcd_text_handler("Hum CRC: OK") : lcd_text_handler("Hum CRC: FAIL");
+    _delay_ms(2000);
+
+    // // Apply conversion formulas from datasheet
+    float temperature = -40.0 + (165.0 * temp_raw / 65535.0); // T = -40 + 165 * ST / (2^16 - 1)
+    float humidity = 100.0 * hum_raw / 65535.0;               // RH = 100 * SRH / (2^16 - 1)
+
+    // // Display temperature
+    sprintf(buffer, "Temp: %.2f C", temperature); // Format temperature with 2 decimal places
+    lcd_text_handler(buffer);                     // Show on LCD
+    _delay_ms(2000);                              // Wait 2 seconds
+
+    // // Display humidity
+    sprintf(buffer, "Hum: %.2f %%", humidity); // Format humidity with 2 decimal places
+    lcd_text_handler(buffer);                  // Show on LCD
+    _delay_ms(2000);                           // Wait 2 seconds
 
     return 0;
 }

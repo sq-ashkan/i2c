@@ -65,5 +65,5 @@ uint8_t crc8_calculate_serial(uint32_t serial_number, uint8_t num_bytes)
     data[2] = (serial_number >> 8) & 0xFF;
     data[3] = serial_number & 0xFF;
 
-    return crc8_calculate(data, num_bytes);
+    return crc8_calculate(data + (4 - num_bytes), num_bytes);
 }
