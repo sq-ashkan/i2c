@@ -978,15 +978,15 @@ LOAD data_init
  .rodata.state_table
                 0x0000000000800202       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
 
-.rodata         0x0000000000800218        0x9 load address 0x000000000000124e
- .rodata        0x0000000000800218        0x9 build/default/production/main.o
+.rodata         0x0000000000800218        0x8 load address 0x000000000000124e
+ .rodata        0x0000000000800218        0x8 build/default/production/main.o
 
 .rodata.nuls.2781
-                0x0000000000800221        0x7 load address 0x0000000000001257
+                0x0000000000800220        0x7 load address 0x0000000000001256
  .rodata.nuls.2781
-                0x0000000000800221        0x7 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
+                0x0000000000800220        0x7 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
 
 .rodata.nilstr.2962
-                0x0000000000800228        0x6 load address 0x000000000000125e
+                0x0000000000800227        0x6 load address 0x000000000000125d
  .rodata.nilstr.2962
-                0x0000000000800228        0x6 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x0000000000800227        0x6 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
