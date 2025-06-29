@@ -1,8 +1,8 @@
 void lcd_pulse(void)
 {
-    PORTB |= (1 << PB7); // H→L der Enable-Leitung ; Daten werden übernommen
+    PORTB |= (1 << PB7); // L→H Enable line (set HIGH)
     _delay_us(20);
-    PORTB &= ~(1 << PB7); // H→L der Enable-Leitung ; Daten werden übernommen
+    PORTB &= ~(1 << PB7); // H→L Enable line (set LOW) - Data is latched on falling edge
     _delay_us(20);
 }
 
@@ -26,7 +26,6 @@ void lcd_text_handler(const char *text)
     DDRB |= (1 << PB5) | // RS = 0 for command | RS = 1 for Data
             (1 << PB6) | // read oder Write | wir brauchen das hier nicht -> immer schreiben wir hier!
             (1 << PB7);  // H→L der Enable-Leitung ; Daten werden übernommen
-    DDRB |= 0x70;
 
     _delay_ms(15);
 

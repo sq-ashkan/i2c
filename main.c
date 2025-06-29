@@ -7,17 +7,17 @@
 #include "./crc8_checker.c"
 
 // TWI Status Macros from Vorlesung
-#define TW_STATUS (TWSR & 0xF8)
-#define TW_START 0x08
-#define TW_REP_START 0x10
+#define TW_STATUS (TWSR & 0xF8) // Vorlesung slide 24
+#define TW_START 0x08           // 252 full data sheet
+#define TW_REP_START 0x10       // 252 full data sheet
 
-#define TW_MT_SLA_ACK 0x18 // for Adress: Data byte has been transmitted; ACK has been received
+#define TW_MT_SLA_ACK 0x18 // for Adress: Data byte has been transmitted; ACK has been received  // Vorlesung 25
 #define TW_MR_SLA_ACK 0x40 // for Adress: Slave Address has been transmitted; ACK has been received - page 252 full data sheet
 
-#define TW_MT_DATA_ACK 0x28 // for Data: Data byte has been transmitted; ACK has been received
+#define TW_MT_DATA_ACK 0x28 // for Data: Data byte has been transmitted; ACK has been received // Vorlesung 25
 
 // HTU31 I2C Adresse
-#define HTU31_ADDRESS 0x40
+#define HTU31_ADDRESS 0x40     // from data sheet page 8
 #define HTU31_READ_SERIAL 0x0A // from data sheet page 8
 
 int twi_init(void)
@@ -26,10 +26,10 @@ int twi_init(void)
     TWSR = (0 << TWPS1) | (0 << TWPS0);                // Prescaler-Bits setzen // prescaler 1 means no divider
     TWDR = 0xFF;                                       // Standardinhalt im Datenregister // need to have vlaue when want to send or recieve data
     TWCR = (1 << TWEN) |                               // Enable TWI-Interface ;release TWI pins.
-           (0 << TWIE) | (0 << TWINT) |                // Disable Interrupt.
+           (0 << TWIE) | (0 << TWINT) |                // Disable Interrupt. / TWINT = interrupt flag will be 1 when done the job / TWIE = interrupt enable
            (0 << TWEA) | (0 << TWSTA) | (0 << TWSTO) | // No Signal requests. / slave mode ACK  / START condition / STOP condition
-           (0 << TWWC);
-    return 0; // Collision
+           (0 << TWWC);                                // Collision
+    return 0;
 }
 
 uint8_t twi_start(uint8_t address)
@@ -54,9 +54,8 @@ uint8_t twi_start(uint8_t address)
 
     // Check Status
     twst = TW_STATUS;
-    if ((twst != TW_MT_SLA_ACK) && (twst != TW_MR_SLA_ACK))
+    if ((twst != TW_MT_SLA_ACK) && (twst != TW_MR_SLA_ACK)) // we check both of them because we dont know what is the adress lsb -> it should hanld ethe both formats
         return 1;
-
     return 0; // Success
 }
 
@@ -70,7 +69,9 @@ void twi_write(uint8_t data)
 
 uint8_t twi_read_ack(void)
 {
-    TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA);
+    TWCR = (1 << TWINT) | // Clear interrupt flag
+           (1 << TWEN) |  // Keep TWI enabled
+           (1 << TWEA);   // Send ACK
     while (!(TWCR & (1 << TWINT)))
         ;
     return TWDR;
@@ -78,7 +79,9 @@ uint8_t twi_read_ack(void)
 
 uint8_t twi_read_nack(void)
 {
-    TWCR = (1 << TWINT) | (1 << TWEN) | (TWEA << 0); // TWEA=0 for NACK
+    TWCR = (1 << TWINT) | // Clear interrupt flag
+           (1 << TWEN) |  // Keep TWI enabled
+           (TWEA << 0);   // No ACK (NACK)
     while (!(TWCR & (1 << TWINT)))
         ;
     return TWDR;
@@ -98,18 +101,18 @@ uint32_t read_htu31_serial_number_with_crc(void)
     uint8_t data[4];
 
     // Command senden
-    twi_start(HTU31_ADDRESS << 1); // Write LSB set zero
+    twi_start(HTU31_ADDRESS << 1); // Write LSB set zero means write | shift to left // s 8 data sheet
     twi_write(HTU31_READ_SERIAL);  // 0x0A command
-    twi_stop();
+    twi_stop();                    // make bus free and connection finished sign
 
-    _delay_ms(60); // Warten für Sensor
+    _delay_ms(60); // Warten für Sensor bereitet den Serial number vor!
 
     // Serial Number lesen (4 bytes)
     twi_start((HTU31_ADDRESS << 1) | 1); // Read
-    data[0] = twi_read_ack();            // MSB
-    data[1] = twi_read_ack();
-    data[2] = twi_read_ack();
-    data[3] = twi_read_nack(); // LSB with NACK
+    data[0] = twi_read_ack();            // MSB // First Byte of Serial
+    data[1] = twi_read_ack();            // Second Byte of Serial
+    data[2] = twi_read_ack();            // third Byte of Serial
+    data[3] = twi_read_nack();           // LSB with NACK // CRC
     twi_stop();
 
     // Combine to 32-bit number
@@ -152,7 +155,7 @@ int main(void)
     // *****
 
     // Send conversion command with OSR=2 for both T and RH
-    twi_start(HTU31_ADDRESS << 1); // Start I2C with write mode
+    twi_start(HTU31_ADDRESS << 1); // set zero on lsb Start I2C with write mode
     twi_write(0x54);               // Conversion command: 01010100 (OSR_RH=2, OSR_T=2)
     twi_stop();                    // Stop I2C
     _delay_ms(60);                 // Wait for conversion to complete
@@ -205,14 +208,18 @@ int main(void)
     float humidity = 100.0 * hum_raw / 65535.0;               // RH = 100 * SRH / (2^16 - 1)
 
     // // Display temperature
-    sprintf(buffer, "Temp: %.2f C", temperature); // Format temperature with 2 decimal places
-    lcd_text_handler(buffer);                     // Show on LCD
-    _delay_ms(2000);                              // Wait 2 seconds
+    int temp_int = (int)temperature;
+    int temp_dec = (int)((temperature - temp_int) * 100);
+    sprintf(buffer, "Temp: %d.%02d C", temp_int, temp_dec); // Format temperature with 2 decimal places
+    lcd_text_handler(buffer);                               // Show on LCD
+    _delay_ms(2000);                                        // Wait 2 seconds
 
     // // Display humidity
-    sprintf(buffer, "Hum: %.2f %%", humidity); // Format humidity with 2 decimal places
-    lcd_text_handler(buffer);                  // Show on LCD
-    _delay_ms(2000);                           // Wait 2 seconds
+    int hum_int = (int)humidity;
+    int hum_dec = (int)((humidity - hum_int) * 100);
+    sprintf(buffer, "Hum: %d.%02d %%", hum_int, hum_dec); // Format humidity with 2 decimal places
+    lcd_text_handler(buffer);                             // Show on LCD
+    _delay_ms(2000);                                      // Wait 2 seconds
 
     return 0;
 }

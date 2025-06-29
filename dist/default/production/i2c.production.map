@@ -8,6 +8,10 @@ Archive member included to satisfy reference by file (symbol)
                               build/default/production/main.o (__divsf3)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3x.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3.o) (__divsf3x)
+/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
+                              build/default/production/main.o (__fixsfsi)
+/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o) (__fixunssfsi)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floatsisf.o)
                               build/default/production/main.o (__floatunsisf)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_inf.o)
@@ -32,36 +36,28 @@ Archive member included to satisfy reference by file (symbol)
                               build/default/production/main.o (__do_copy_data)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
                               /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o (exit)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
-                              build/default/production/main.o (_sprintf_cdfFopuxX)
+/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
+                              build/default/production/main.o (_sprintf_cdopuxX)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__fmt_d_needed)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__fmt_f_needed)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o) (__fmt_d_needed)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__fmt_o_needed)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o) (__fmt_o_needed)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__fmt_s_needed)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o) (__fmt_s_needed)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o) (__cvt_u)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_x.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__fmt_x_needed)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o) (__fmt_x_needed)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_int.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__pop_int_needed)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o) (__pop_int_needed)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o) (__pad)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o) (fputc)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__pop_float_needed)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (memset)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (strcpy)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (strlen)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o) (strlen)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(tolower.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (tolower)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o) (tolower)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(toupper.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_x.o) (toupper)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(errno.o)
@@ -69,35 +65,19 @@ Archive member included to satisfy reference by file (symbol)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(_Exit.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o) (_Exit)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsprintf.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__vsprintf)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o) (__vsprintf)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsnprintf.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsprintf.o) (__vsnprintf)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsnprintf.o) (__vfprintf)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (__divmodhi4)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o) (__udivmodsi4)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
                               /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(_Exit.o) (_exit)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_prologue.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__prologue_saves__)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o) (__prologue_saves__)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_epilogue.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o) (__epilogue_restores__)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o) (__udivmodhi4)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(cmpsf2.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (__eqsf2)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (__fixsfsi)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o) (__fixunssfsi)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (floorf)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_cmp.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(cmpsf2.o) (__fp_cmp)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(gesf2.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o) (__gesf2)
+                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o) (__epilogue_restores__)
 
 Allocating common symbols
 Common symbol       size              file
@@ -127,6 +107,14 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3x.o)
  .stack.descriptors
                 0x0000000000000000       0x31 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3x.o)
+ .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
+ .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
+ .stack.descriptors
+                0x0000000000000000       0x17 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
+ .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+ .stack.descriptors
+                0x0000000000000000       0x1a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
  .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floatsisf.o)
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floatsisf.o)
  .stack.descriptors
@@ -188,23 +176,18 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
  .stack.descriptors
                 0x0000000000000000       0x73 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
+ .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
+ .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
+ .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
  .stack.descriptors
-                0x0000000000000000       0x3d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
- .text.__sio_sprintf_dfoux
-                0x0000000000000000       0x22 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
+                0x0000000000000000       0x3c /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
+ .text.__sio_sprintf_doux
+                0x0000000000000000       0x1a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
  .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
  .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
  .stack.descriptors
                 0x0000000000000000       0x15 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
- .stack.descriptors
-                0x0000000000000000       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
  .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
  .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
@@ -240,21 +223,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
  .stack.descriptors
                 0x0000000000000000       0x13 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
- .stack.descriptors
-                0x0000000000000000       0x19 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
- .stack.descriptors
-                0x0000000000000000       0x14 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
- .stack.descriptors
-                0x0000000000000000       0x14 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
  .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
  .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
@@ -297,22 +265,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
  .stack.descriptors
                 0x0000000000000000       0x18 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .text.libgcc.mul
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .stack.descriptors
-                0x0000000000000000       0x19 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .text.libgcc   0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .text.libgcc.builtins
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .text.libgcc.fmul
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .text.libgcc.fixed
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
  .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
  .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
@@ -375,47 +327,6 @@ Discarded input sections
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_epilogue.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_epilogue.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .text.libgcc.mul
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .stack.descriptors
-                0x0000000000000000       0x1a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .text.libgcc   0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .text.libgcc.builtins
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .text.libgcc.fmul
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .text.libgcc.fixed
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(cmpsf2.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(cmpsf2.o)
- .stack.descriptors
-                0x0000000000000000       0x6a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(cmpsf2.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
- .stack.descriptors
-                0x0000000000000000       0x17 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
- .stack.descriptors
-                0x0000000000000000       0x1a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
- .stack.descriptors
-                0x0000000000000000       0x14 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_cmp.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_cmp.o)
- .stack.descriptors
-                0x0000000000000000       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_cmp.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(gesf2.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(gesf2.o)
- .stack.descriptors
-                0x0000000000000000       0x2a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(gesf2.o)
 
 Memory Configuration
 
@@ -546,7 +457,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x184
+.text           0x0000000000000000      0x180
  *(.vectors)
  .vectors       0x0000000000000000       0xe4 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
                 0x0000000000000000                __vectors
@@ -556,42 +467,41 @@ END GROUP
  *(.dinit)
  .dinit         0x00000000000000e4        0xc data_init
                 0x00000000000000f0                . = ALIGN (0x2)
- *fill*         0x00000000000000f0        0x0 
                 0x00000000000000f0                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x00000000000000f0       0x38 linker stubs
+ .trampolines   0x00000000000000f0       0x34 linker stubs
  *(.trampolines*)
-                0x0000000000000128                __trampolines_end = .
+                0x0000000000000124                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
-                0x0000000000000128                . = ALIGN (0x2)
+                0x0000000000000124                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000000000000128                __ctors_start = .
+                0x0000000000000124                __ctors_start = .
  *(.ctors)
-                0x0000000000000128                __ctors_end = .
-                0x0000000000000128                __dtors_start = .
+                0x0000000000000124                __ctors_end = .
+                0x0000000000000124                __dtors_start = .
  *(.dtors)
-                0x0000000000000128                __dtors_end = .
+                0x0000000000000124                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000000000000128        0x0 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
-                0x0000000000000128                __init
+ .init0         0x0000000000000124        0x0 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
+                0x0000000000000124                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000000000000128       0x10 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
+ .init2         0x0000000000000124       0x10 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x0000000000000138       0x40 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
-                0x0000000000000138                __do_copy_data
-                0x000000000000016a                __do_clear_bss
+ .init4         0x0000000000000134       0x40 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+                0x0000000000000134                __do_copy_data
+                0x0000000000000166                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -602,12 +512,12 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000178        0x8 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
+ .init9         0x0000000000000174        0x8 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
  *(.init9)
-                0x0000000000000180                . = ALIGN (0x2)
+                0x000000000000017c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000180        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
-                0x0000000000000180                _exit
+ .fini9         0x000000000000017c        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+                0x000000000000017c                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -626,11 +536,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000180        0x4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .fini0         0x000000000000017c        0x4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000000184                _etext = .
+                0x0000000000000180                _etext = .
 
-.data           0x0000000000800200        0x0 load address 0x0000000000000184
+.data           0x0000000000800200        0x0 load address 0x0000000000000180
                 [!provide]                        PROVIDE (__data_start, .)
  *(.gnu.linkonce.d*)
  *(.gnu.linkonce.r*)
@@ -644,8 +554,8 @@ END GROUP
  COMMON         0x0000000000800200        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(errno.o)
                 0x0000000000800200                __errno_val
                 [!provide]                        PROVIDE (__bss_end, .)
-                0x0000000000000184                __data_load_start = LOADADDR (.data)
-                0x0000000000000184                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000000000000180                __data_load_start = LOADADDR (.data)
+                0x0000000000000180                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000800202        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -699,9 +609,8 @@ END GROUP
                                          0x30 (size before relaxing)
  .comment       0x000000000000002f       0x2c /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
                                          0x2d (size before relaxing)
- .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
+ .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
- .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o)
@@ -709,9 +618,6 @@ END GROUP
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_int.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
- .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
- .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
- .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(tolower.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(toupper.o)
@@ -720,10 +626,9 @@ END GROUP
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsprintf.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsnprintf.o)
  .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
- .comment       0x000000000000005b       0x2d /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
 
 .stack.descriptors.hdr
-                0x0000000000000000      0x284
+                0x0000000000000000      0x1f8
  .stack.descriptors.hdr
                 0x0000000000000000        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(addsf3.o)
  .stack.descriptors.hdr
@@ -733,89 +638,69 @@ END GROUP
  .stack.descriptors.hdr
                 0x000000000000002a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3x.o)
  .stack.descriptors.hdr
-                0x0000000000000038        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floatsisf.o)
+                0x0000000000000038        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
  .stack.descriptors.hdr
-                0x0000000000000046        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_inf.o)
+                0x0000000000000046        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
  .stack.descriptors.hdr
-                0x0000000000000054        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_nan.o)
+                0x0000000000000054        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floatsisf.o)
  .stack.descriptors.hdr
-                0x0000000000000062        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_pscA.o)
+                0x0000000000000062        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_inf.o)
  .stack.descriptors.hdr
-                0x0000000000000070        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_pscB.o)
+                0x0000000000000070        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_nan.o)
  .stack.descriptors.hdr
-                0x000000000000007e        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_round.o)
+                0x000000000000007e        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_pscA.o)
  .stack.descriptors.hdr
-                0x000000000000008c        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_split3.o)
+                0x000000000000008c        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_pscB.o)
  .stack.descriptors.hdr
-                0x000000000000009a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_zero.o)
+                0x000000000000009a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_round.o)
  .stack.descriptors.hdr
-                0x00000000000000a8        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(mulsf3.o)
+                0x00000000000000a8        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_split3.o)
  .stack.descriptors.hdr
-                0x00000000000000b6        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(mulsf3x.o)
+                0x00000000000000b6        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_zero.o)
  .stack.descriptors.hdr
-                0x00000000000000c4        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
+                0x00000000000000c4        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(mulsf3.o)
  .stack.descriptors.hdr
-                0x00000000000000d2        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
+                0x00000000000000d2        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(mulsf3x.o)
  .stack.descriptors.hdr
-                0x00000000000000e0        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
+                0x00000000000000e0        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
  .stack.descriptors.hdr
-                0x00000000000000ee        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
+                0x00000000000000ee        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
  .stack.descriptors.hdr
-                0x00000000000000fc        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
+                0x00000000000000fc        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
  .stack.descriptors.hdr
-                0x000000000000010a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
+                0x000000000000010a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
  .stack.descriptors.hdr
-                0x0000000000000118        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o)
+                0x0000000000000118        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
  .stack.descriptors.hdr
-                0x0000000000000126        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_x.o)
+                0x0000000000000126        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o)
  .stack.descriptors.hdr
-                0x0000000000000134        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_int.o)
+                0x0000000000000134        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_x.o)
  .stack.descriptors.hdr
-                0x0000000000000142        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x0000000000000142        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_int.o)
  .stack.descriptors.hdr
-                0x0000000000000150        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
+                0x0000000000000150        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
  .stack.descriptors.hdr
-                0x000000000000015e        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
+                0x000000000000015e        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
  .stack.descriptors.hdr
-                0x000000000000016c        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
+                0x000000000000016c        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
  .stack.descriptors.hdr
-                0x000000000000017a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
+                0x000000000000017a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(tolower.o)
  .stack.descriptors.hdr
-                0x0000000000000188        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
+                0x0000000000000188        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(toupper.o)
  .stack.descriptors.hdr
-                0x0000000000000196        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(tolower.o)
+                0x0000000000000196        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(errno.o)
  .stack.descriptors.hdr
-                0x00000000000001a4        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(toupper.o)
+                0x00000000000001a4        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(_Exit.o)
  .stack.descriptors.hdr
-                0x00000000000001b2        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(errno.o)
+                0x00000000000001b2        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsprintf.o)
  .stack.descriptors.hdr
-                0x00000000000001c0        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(_Exit.o)
+                0x00000000000001c0        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsnprintf.o)
  .stack.descriptors.hdr
-                0x00000000000001ce        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsprintf.o)
+                0x00000000000001ce        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
  .stack.descriptors.hdr
-                0x00000000000001dc        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsnprintf.o)
+                0x00000000000001dc        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
  .stack.descriptors.hdr
-                0x00000000000001ea        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
- .stack.descriptors.hdr
-                0x00000000000001f8        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
- .stack.descriptors.hdr
-                0x0000000000000206        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
- .stack.descriptors.hdr
-                0x0000000000000214        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
- .stack.descriptors.hdr
-                0x0000000000000222        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
- .stack.descriptors.hdr
-                0x0000000000000230        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(cmpsf2.o)
- .stack.descriptors.hdr
-                0x000000000000023e        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
- .stack.descriptors.hdr
-                0x000000000000024c        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
- .stack.descriptors.hdr
-                0x000000000000025a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
- .stack.descriptors.hdr
-                0x0000000000000268        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_cmp.o)
- .stack.descriptors.hdr
-                0x0000000000000276        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(gesf2.o)
+                0x00000000000001ea        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
 
 .note.GNU-stack
                 0x0000000000000000        0x0
@@ -827,6 +712,10 @@ END GROUP
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3x.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floatsisf.o)
  .note.GNU-stack
@@ -850,11 +739,9 @@ END GROUP
  .note.GNU-stack
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
  .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
  .note.GNU-stack
@@ -869,12 +756,6 @@ END GROUP
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
  .note.GNU-stack
@@ -891,18 +772,6 @@ END GROUP
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsnprintf.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(cmpsf2.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_cmp.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(gesf2.o)
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -927,33 +796,33 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1be8
+.debug_info     0x0000000000000000     0x1c36
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0xbbc /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
- .debug_info    0x0000000000000bbc     0x102c build/default/production/main.o
+ .debug_info    0x0000000000000bbc     0x107a build/default/production/main.o
 
 .debug_abbrev   0x0000000000000000      0xd36
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0xb1a /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
  .debug_abbrev  0x0000000000000b1a      0x21c build/default/production/main.o
 
-.debug_line     0x0000000000000000      0x874
+.debug_line     0x0000000000000000      0x886
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x1fa /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
- .debug_line    0x00000000000001fa      0x67a build/default/production/main.o
+ .debug_line    0x00000000000001fa      0x68c build/default/production/main.o
 
-.debug_frame    0x0000000000000000      0x17c
+.debug_frame    0x0000000000000000      0x188
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x17c build/default/production/main.o
+ .debug_frame   0x0000000000000000      0x188 build/default/production/main.o
 
 .debug_str      0x0000000000000000      0x41a
  *(.debug_str)
  .debug_str     0x0000000000000000      0x3e6 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
  .debug_str     0x00000000000003e6       0x34 build/default/production/main.o
 
-.debug_loc      0x0000000000000000      0xb5a
+.debug_loc      0x0000000000000000      0xbbf
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0xb5a build/default/production/main.o
+ .debug_loc     0x0000000000000000      0xbbf build/default/production/main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -988,446 +857,382 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
 
-.text.__fmt_fp  0x0000000000000184      0x728
- .text.__fmt_fp
-                0x0000000000000184      0x728 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
-                0x0000000000000184                __fmt_fp
-                0x0000000000000184                __fmt_f_needed
-
 .text.vfpfcnvrt
-                0x00000000000008ac      0x3fc
+                0x0000000000000180      0x3fc
  .text.vfpfcnvrt
-                0x00000000000008ac      0x3fc /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
-                0x00000000000008ac                vfpfcnvrt
+                0x0000000000000180      0x3fc /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x0000000000000180                vfpfcnvrt
 
-.text.main      0x0000000000000ca8      0x30e
- .text.main     0x0000000000000ca8      0x30e build/default/production/main.o
-                0x0000000000000ca8                main
+.text.main      0x000000000000057c      0x384
+ .text.main     0x000000000000057c      0x384 build/default/production/main.o
+                0x000000000000057c                main
 
-.text.__fmt_x   0x0000000000000fb6      0x1dc
- .text.__fmt_x  0x0000000000000fb6      0x1dc /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_x.o)
-                0x0000000000000fb6                __fmt_x
-                0x0000000000000fb6                __fmt_x_needed
+.text.__fmt_x   0x0000000000000900      0x1dc
+ .text.__fmt_x  0x0000000000000900      0x1dc /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_x.o)
+                0x0000000000000900                __fmt_x
+                0x0000000000000900                __fmt_x_needed
 
-.text.floorf    0x0000000000001192       0xe6
- .text.floorf   0x0000000000001192       0xe6 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floorf.o)
-                0x0000000000001192                floorf
+.text.__fmt_d   0x0000000000000adc       0xe4
+ .text.__fmt_d  0x0000000000000adc       0xe4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
+                0x0000000000000adc                __fmt_d_needed
+                0x0000000000000adc                __fmt_d
 
-.text.__fmt_d   0x0000000000001278       0xe4
- .text.__fmt_d  0x0000000000001278       0xe4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_d.o)
-                0x0000000000001278                __fmt_d_needed
-                0x0000000000001278                __fmt_d
+.text           0x0000000000000bc0       0xde
+ .text          0x0000000000000bc0       0xde /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3x.o)
+                0x0000000000000bc0                __divsf3x
+                0x0000000000000be8                __divsf3_pse
 
-.text           0x000000000000135c       0xde
- .text          0x000000000000135c       0xde /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3x.o)
-                0x000000000000135c                __divsf3x
-                0x0000000000001384                __divsf3_pse
-
-.text           0x000000000000143a       0xd4
- .text          0x000000000000143a       0xd4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(mulsf3x.o)
-                0x000000000000143a                __mulsf3x
-                0x0000000000001460                __mulsf3_pse
+.text           0x0000000000000c9e       0xd4
+ .text          0x0000000000000c9e       0xd4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(mulsf3x.o)
+                0x0000000000000c9e                __mulsf3x
+                0x0000000000000cc4                __mulsf3_pse
 
 .text.__pop_int
-                0x000000000000150e       0xd0
+                0x0000000000000d72       0xd0
  .text.__pop_int
-                0x000000000000150e       0xd0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_int.o)
-                0x000000000000150e                __pop_int
-                0x000000000000150e                __pop_int_needed
+                0x0000000000000d72       0xd0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_int.o)
+                0x0000000000000d72                __pop_int
+                0x0000000000000d72                __pop_int_needed
 
-.text           0x00000000000015de       0xce
- .text          0x00000000000015de       0xce /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(addsf3x.o)
-                0x00000000000015de                __addsf3x
+.text           0x0000000000000e42       0xce
+ .text          0x0000000000000e42       0xce /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(addsf3x.o)
+                0x0000000000000e42                __addsf3x
 
-.text.__cvt_u   0x00000000000016ac       0xca
- .text.__cvt_u  0x00000000000016ac       0xca /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o)
-                0x00000000000016ac                __cvt_u
+.text.__cvt_u   0x0000000000000f10       0xca
+ .text.__cvt_u  0x0000000000000f10       0xca /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o)
+                0x0000000000000f10                __cvt_u
 
 .text.lcd_text_handler
-                0x0000000000001776       0xbc
+                0x0000000000000fda       0xb6
  .text.lcd_text_handler
-                0x0000000000001776       0xbc build/default/production/main.o
-                0x0000000000001776                lcd_text_handler
+                0x0000000000000fda       0xb6 build/default/production/main.o
+                0x0000000000000fda                lcd_text_handler
 
-.text.__fmt_o   0x0000000000001832       0xb2
- .text.__fmt_o  0x0000000000001832       0xb2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
-                0x0000000000001832                __fmt_o_needed
-                0x0000000000001832                __fmt_o
+.text.__fmt_o   0x0000000000001090       0xb2
+ .text.__fmt_o  0x0000000000001090       0xb2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_o.o)
+                0x0000000000001090                __fmt_o_needed
+                0x0000000000001090                __fmt_o
 
-.text.fputc     0x00000000000018e4       0x98
- .text.fputc    0x00000000000018e4       0x98 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
-                0x00000000000018e4                putc
-                0x00000000000018e4                fputc
+.text.fputc     0x0000000000001142       0x98
+ .text.fputc    0x0000000000001142       0x98 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(fputc.o)
+                0x0000000000001142                putc
+                0x0000000000001142                fputc
 
-.text.__fmt_u   0x000000000000197c       0x8e
- .text.__fmt_u  0x000000000000197c       0x8e /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o)
-                0x000000000000197c                __fmt_u
-                0x000000000000197c                __fmt_u_needed
+.text.__fmt_u   0x00000000000011da       0x8e
+ .text.__fmt_u  0x00000000000011da       0x8e /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_u.o)
+                0x00000000000011da                __fmt_u
+                0x00000000000011da                __fmt_u_needed
 
-.text           0x0000000000001a0a       0x7a
- .text          0x0000000000001a0a       0x7a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floatsisf.o)
-                0x0000000000001a0a                __floatunsisf
-                0x0000000000001a0e                __floatsisf
+.text           0x0000000000001268       0x7a
+ .text          0x0000000000001268       0x7a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(floatsisf.o)
+                0x0000000000001268                __floatunsisf
+                0x000000000000126c                __floatsisf
 
 .text.__printf_core
-                0x0000000000001a84       0x78
+                0x00000000000012e2       0x78
  .text.__printf_core
-                0x0000000000001a84       0x78 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
-                0x0000000000001a84                __printf_core
+                0x00000000000012e2       0x78 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x00000000000012e2                __printf_core
 
 .text.__vsnprintf
-                0x0000000000001afc       0x74
+                0x000000000000135a       0x74
  .text.__vsnprintf
-                0x0000000000001afc       0x74 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsnprintf.o)
-                0x0000000000001afc                __vsnprintf
+                0x000000000000135a       0x74 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsnprintf.o)
+                0x000000000000135a                __vsnprintf
 
-.text.__pad     0x0000000000001b70       0x72
- .text.__pad    0x0000000000001b70       0x72 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
-                0x0000000000001b70                __pad
+.text.__pad     0x00000000000013ce       0x72
+ .text.__pad    0x00000000000013ce       0x72 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x00000000000013ce                __pad
 
 .text.read_htu31_serial_number_with_crc
-                0x0000000000001be2       0x6e
+                0x0000000000001440       0x6e
  .text.read_htu31_serial_number_with_crc
-                0x0000000000001be2       0x6e build/default/production/main.o
-                0x0000000000001be2                read_htu31_serial_number_with_crc
+                0x0000000000001440       0x6e build/default/production/main.o
+                0x0000000000001440                read_htu31_serial_number_with_crc
 
-.text           0x0000000000001c50       0x5e
- .text          0x0000000000001c50       0x5e /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
-                0x0000000000001c50                __fixunssfsi
+.text           0x00000000000014ae       0x5e
+ .text          0x00000000000014ae       0x5e /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+                0x00000000000014ae                __fixunssfsi
 
 .text.read_prec_or_width
-                0x0000000000001cae       0x5c
+                0x000000000000150c       0x5c
  .text.read_prec_or_width
-                0x0000000000001cae       0x5c /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x000000000000150c       0x5c /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
 
-.text.__fmt_s   0x0000000000001d0a       0x54
- .text.__fmt_s  0x0000000000001d0a       0x54 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
-                0x0000000000001d0a                __fmt_s_needed
-                0x0000000000001d0a                __fmt_s
-                0x0000000000001d0a                __fmt_0_needed
+.text.__fmt_s   0x0000000000001568       0x54
+ .text.__fmt_s  0x0000000000001568       0x54 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
+                0x0000000000001568                __fmt_s_needed
+                0x0000000000001568                __fmt_s
+                0x0000000000001568                __fmt_0_needed
 
 .text.twi_start
-                0x0000000000001d5e       0x4e
+                0x00000000000015bc       0x4e
  .text.twi_start
-                0x0000000000001d5e       0x4e build/default/production/main.o
-                0x0000000000001d5e                twi_start
+                0x00000000000015bc       0x4e build/default/production/main.o
+                0x00000000000015bc                twi_start
 
-.text           0x0000000000001dac       0x48
- .text          0x0000000000001dac       0x48 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_cmp.o)
-                0x0000000000001dac                __fp_cmp
-
-.text           0x0000000000001df4       0x44
- .text          0x0000000000001df4       0x44 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_split3.o)
-                0x0000000000001df4                __fp_split3
-                0x0000000000001e04                __fp_splitA
+.text           0x000000000000160a       0x44
+ .text          0x000000000000160a       0x44 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_split3.o)
+                0x000000000000160a                __fp_split3
+                0x000000000000161a                __fp_splitA
 
 .text.libgcc.div
-                0x0000000000001e38       0x44
+                0x000000000000164e       0x44
  .text.libgcc.div
-                0x0000000000001e38       0x44 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
-                0x0000000000001e38                __udivmodsi4
+                0x000000000000164e       0x44 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+                0x000000000000164e                __udivmodsi4
 
 .text.__fmt_state
-                0x0000000000001e7c       0x40
+                0x0000000000001692       0x40
  .text.__fmt_state
-                0x0000000000001e7c       0x40 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
-                0x0000000000001e7c                __fmt_state
-
-.text.__pop_float
-                0x0000000000001ebc       0x40
- .text.__pop_float
-                0x0000000000001ebc       0x40 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__pop_float.o)
-                0x0000000000001ebc                __pop_float
-                0x0000000000001ebc                __pop_float_needed
+                0x0000000000001692       0x40 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x0000000000001692                __fmt_state
 
 .text.crc8_calculate_serial
-                0x0000000000001efc       0x3e
+                0x00000000000016d2       0x3e
  .text.crc8_calculate_serial
-                0x0000000000001efc       0x3e build/default/production/main.o
-                0x0000000000001efc                crc8_calculate_serial
+                0x00000000000016d2       0x3e build/default/production/main.o
+                0x00000000000016d2                crc8_calculate_serial
 
 .text.lcd_string
-                0x0000000000001f3a       0x3a
+                0x0000000000001710       0x3a
  .text.lcd_string
-                0x0000000000001f3a       0x3a build/default/production/main.o
-                0x0000000000001f3a                lcd_string
+                0x0000000000001710       0x3a build/default/production/main.o
+                0x0000000000001710                lcd_string
 
-.text.__out     0x0000000000001f74       0x3a
- .text.__out    0x0000000000001f74       0x3a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
-                0x0000000000001f74                __out
-
-.text.libgcc.prologue
-                0x0000000000001fae       0x38
- .text.libgcc.prologue
-                0x0000000000001fae       0x38 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_prologue.o)
-                0x0000000000001fae                __prologue_saves__
+.text.__out     0x000000000000174a       0x3a
+ .text.__out    0x000000000000174a       0x3a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x000000000000174a                __out
 
 .text.libgcc.prologue
-                0x0000000000001fe6       0x36
+                0x0000000000001784       0x38
  .text.libgcc.prologue
-                0x0000000000001fe6       0x36 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_epilogue.o)
-                0x0000000000001fe6                __epilogue_restores__
+                0x0000000000001784       0x38 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_prologue.o)
+                0x0000000000001784                __prologue_saves__
+
+.text.libgcc.prologue
+                0x00000000000017bc       0x36
+ .text.libgcc.prologue
+                0x00000000000017bc       0x36 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_epilogue.o)
+                0x00000000000017bc                __epilogue_restores__
 
 .text.__vfprintf
-                0x000000000000201c       0x30
+                0x00000000000017f2       0x30
  .text.__vfprintf
-                0x000000000000201c       0x30 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
-                0x000000000000201c                __vfprintf
+                0x00000000000017f2       0x30 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vfprintf.o)
+                0x00000000000017f2                __vfprintf
 
 .text.crc8_calculate
-                0x000000000000204c       0x28
+                0x0000000000001822       0x28
  .text.crc8_calculate
-                0x000000000000204c       0x28 build/default/production/main.o
-                0x000000000000204c                crc8_calculate
-
-.text.libgcc.div
-                0x0000000000002074       0x28
- .text.libgcc.div
-                0x0000000000002074       0x28 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodhi4.o)
-                0x0000000000002074                __divmodhi4
-                0x0000000000002074                _div
-
-.text.libgcc.div
-                0x000000000000209c       0x28
- .text.libgcc.div
-                0x000000000000209c       0x28 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
-                0x000000000000209c                __udivmodhi4
+                0x0000000000001822       0x28 build/default/production/main.o
+                0x0000000000001822                crc8_calculate
 
 .text.__wrap_sprintf
-                0x00000000000020c4       0x24
+                0x000000000000184a       0x24
  .text.__wrap_sprintf
-                0x00000000000020c4       0x24 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_dfoux.o)
-                0x00000000000020c4                _sprintf_cdeEgGopuxX
-                0x00000000000020c4                _sprintf_cdeEopuxX
-                0x00000000000020c4                _sprintf_cdeEfFopuxX
-                0x00000000000020c4                _sprintf_cdfFgGopuxX
-                0x00000000000020c4                _sprintf_cdgGopuxX
-                0x00000000000020c4                _sprintf_cdeEfFgGopuxX
-                0x00000000000020c4                _sprintf_cdfFopuxX
+                0x000000000000184a       0x24 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__sio_sprintf_doux.o)
+                0x000000000000184a                _sprintf_cdopuxX
 
-.text           0x00000000000020e8       0x22
- .text          0x00000000000020e8       0x22 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_round.o)
-                0x00000000000020e8                __fp_round
+.text           0x000000000000186e       0x22
+ .text          0x000000000000186e       0x22 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_round.o)
+                0x000000000000186e                __fp_round
 
-.text.twi_init  0x000000000000210a       0x1c
+.text.twi_init  0x0000000000001890       0x1c
  .text.twi_init
-                0x000000000000210a       0x1c build/default/production/main.o
-                0x000000000000210a                twi_init
+                0x0000000000001890       0x1c build/default/production/main.o
+                0x0000000000001890                twi_init
 
-.text.strlen    0x0000000000002126       0x1c
- .text.strlen   0x0000000000002126       0x1c /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
-                0x0000000000002126                strlen
+.text.strlen    0x00000000000018ac       0x1c
+ .text.strlen   0x00000000000018ac       0x1c /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strlen.o)
+                0x00000000000018ac                strlen
 
 .text.lcd_pulse
-                0x0000000000002142       0x16
+                0x00000000000018c8       0x16
  .text.lcd_pulse
-                0x0000000000002142       0x16 build/default/production/main.o
-                0x0000000000002142                lcd_pulse
+                0x00000000000018c8       0x16 build/default/production/main.o
+                0x00000000000018c8                lcd_pulse
 
 .text.twi_write
-                0x0000000000002158       0x16
+                0x00000000000018de       0x16
  .text.twi_write
-                0x0000000000002158       0x16 build/default/production/main.o
-                0x0000000000002158                twi_write
+                0x00000000000018de       0x16 build/default/production/main.o
+                0x00000000000018de                twi_write
 
 .text.twi_read_ack
-                0x000000000000216e       0x16
+                0x00000000000018f4       0x16
  .text.twi_read_ack
-                0x000000000000216e       0x16 build/default/production/main.o
-                0x000000000000216e                twi_read_ack
+                0x00000000000018f4       0x16 build/default/production/main.o
+                0x00000000000018f4                twi_read_ack
 
 .text.twi_read_nack
-                0x0000000000002184       0x16
+                0x000000000000190a       0x16
  .text.twi_read_nack
-                0x0000000000002184       0x16 build/default/production/main.o
-                0x0000000000002184                twi_read_nack
+                0x000000000000190a       0x16 build/default/production/main.o
+                0x000000000000190a                twi_read_nack
 
-.text.exit      0x000000000000219a       0x16
- .text.exit     0x000000000000219a       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
-                0x000000000000219a                exit
+.text.exit      0x0000000000001920       0x16
+ .text.exit     0x0000000000001920       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
+                0x0000000000001920                exit
 
-.text.twi_stop  0x00000000000021b0       0x12
+.text.twi_stop  0x0000000000001936       0x12
  .text.twi_stop
-                0x00000000000021b0       0x12 build/default/production/main.o
-                0x00000000000021b0                twi_stop
+                0x0000000000001936       0x12 build/default/production/main.o
+                0x0000000000001936                twi_stop
 
-.text.memset    0x00000000000021c2       0x12
- .text.memset   0x00000000000021c2       0x12 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(memset.o)
-                0x00000000000021c2                memset
+.text.toupper   0x0000000000001948       0x12
+ .text.toupper  0x0000000000001948       0x12 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(toupper.o)
+                0x0000000000001948                toupper
 
-.text.toupper   0x00000000000021d4       0x12
- .text.toupper  0x00000000000021d4       0x12 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(toupper.o)
-                0x00000000000021d4                toupper
+.text.tolower   0x000000000000195a       0x10
+ .text.tolower  0x000000000000195a       0x10 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(tolower.o)
+                0x000000000000195a                tolower
 
-.text.strcpy    0x00000000000021e6       0x10
- .text.strcpy   0x00000000000021e6       0x10 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(strcpy.o)
-                0x00000000000021e6                strcpy
+.text           0x000000000000196a        0xe
+ .text          0x000000000000196a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(addsf3.o)
+                0x000000000000196a                __subsf3
+                0x000000000000196c                __addsf3
 
-.text.tolower   0x00000000000021f6       0x10
- .text.tolower  0x00000000000021f6       0x10 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(tolower.o)
-                0x00000000000021f6                tolower
+.text           0x0000000000001978        0xe
+ .text          0x0000000000001978        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
+                0x0000000000001978                __fixsfsi
 
-.text           0x0000000000002206        0xe
- .text          0x0000000000002206        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(addsf3.o)
-                0x0000000000002206                __subsf3
-                0x0000000000002208                __addsf3
+.text           0x0000000000001986        0xe
+ .text          0x0000000000001986        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_pscA.o)
+                0x0000000000001986                __fp_pscA
 
-.text           0x0000000000002214        0xe
- .text          0x0000000000002214        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_pscA.o)
-                0x0000000000002214                __fp_pscA
+.text           0x0000000000001994        0xe
+ .text          0x0000000000001994        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_pscB.o)
+                0x0000000000001994                __fp_pscB
 
-.text           0x0000000000002222        0xe
- .text          0x0000000000002222        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_pscB.o)
-                0x0000000000002222                __fp_pscB
-
-.text           0x0000000000002230        0xe
- .text          0x0000000000002230        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_zero.o)
-                0x0000000000002230                __fp_zero
-                0x0000000000002232                __fp_szero
+.text           0x00000000000019a2        0xe
+ .text          0x00000000000019a2        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_zero.o)
+                0x00000000000019a2                __fp_zero
+                0x00000000000019a4                __fp_szero
 
 .text.__vsprintf
-                0x000000000000223e        0xe
+                0x00000000000019b0        0xe
  .text.__vsprintf
-                0x000000000000223e        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsprintf.o)
-                0x000000000000223e                __vsprintf
+                0x00000000000019b0        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__int_vsprintf.o)
+                0x00000000000019b0                __vsprintf
 
-.text           0x000000000000224c        0xe
- .text          0x000000000000224c        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fixsfsi.o)
-                0x000000000000224c                __fixsfsi
+.text           0x00000000000019be        0xc
+ .text          0x00000000000019be        0xc /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_inf.o)
+                0x00000000000019be                __fp_inf
 
-.text           0x000000000000225a        0xc
- .text          0x000000000000225a        0xc /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_inf.o)
-                0x000000000000225a                __fp_inf
+.text           0x00000000000019ca        0x8
+ .text          0x00000000000019ca        0x8 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3.o)
+                0x00000000000019ca                __divsf3
 
-.text           0x0000000000002266        0xa
- .text          0x0000000000002266        0xa /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(cmpsf2.o)
-                0x0000000000002266                __lesf2
-                0x0000000000002266                __nesf2
-                0x0000000000002266                __eqsf2
-                0x0000000000002266                __cmpsf2
-                0x0000000000002266                __ltsf2
+.text           0x00000000000019d2        0x8
+ .text          0x00000000000019d2        0x8 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(mulsf3.o)
+                0x00000000000019d2                __mulsf3
 
-.text           0x0000000000002270        0xa
- .text          0x0000000000002270        0xa /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(gesf2.o)
-                0x0000000000002270                __gtsf2
-                0x0000000000002270                __gesf2
+.text           0x00000000000019da        0x6
+ .text          0x00000000000019da        0x6 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_nan.o)
+                0x00000000000019da                __fp_nan
 
-.text           0x000000000000227a        0x8
- .text          0x000000000000227a        0x8 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(divsf3.o)
-                0x000000000000227a                __divsf3
+.text           0x00000000000019e0        0x4
+ .text          0x00000000000019e0        0x4 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
+                0x00000000000019e0                __vector_42
+                0x00000000000019e0                __vector_22
+                0x00000000000019e0                __vector_28
+                0x00000000000019e0                __vector_1
+                0x00000000000019e0                __vector_32
+                0x00000000000019e0                __vector_34
+                0x00000000000019e0                __vector_24
+                0x00000000000019e0                __vector_12
+                0x00000000000019e0                __vector_55
+                0x00000000000019e0                __vector_46
+                0x00000000000019e0                __bad_interrupt
+                0x00000000000019e0                __vector_6
+                0x00000000000019e0                __vector_31
+                0x00000000000019e0                __vector_35
+                0x00000000000019e0                __vector_39
+                0x00000000000019e0                __vector_3
+                0x00000000000019e0                __vector_23
+                0x00000000000019e0                __vector_30
+                0x00000000000019e0                __vector_45
+                0x00000000000019e0                __vector_25
+                0x00000000000019e0                __vector_11
+                0x00000000000019e0                __vector_54
+                0x00000000000019e0                __vector_13
+                0x00000000000019e0                __vector_17
+                0x00000000000019e0                __vector_19
+                0x00000000000019e0                __vector_56
+                0x00000000000019e0                __vector_7
+                0x00000000000019e0                __vector_49
+                0x00000000000019e0                __vector_41
+                0x00000000000019e0                __vector_43
+                0x00000000000019e0                __vector_27
+                0x00000000000019e0                __vector_5
+                0x00000000000019e0                __vector_33
+                0x00000000000019e0                __vector_47
+                0x00000000000019e0                __vector_52
+                0x00000000000019e0                __vector_37
+                0x00000000000019e0                __vector_4
+                0x00000000000019e0                __vector_44
+                0x00000000000019e0                __vector_51
+                0x00000000000019e0                __vector_9
+                0x00000000000019e0                __vector_2
+                0x00000000000019e0                __vector_21
+                0x00000000000019e0                __vector_15
+                0x00000000000019e0                __vector_36
+                0x00000000000019e0                __vector_29
+                0x00000000000019e0                __vector_40
+                0x00000000000019e0                __vector_8
+                0x00000000000019e0                __vector_26
+                0x00000000000019e0                __vector_48
+                0x00000000000019e0                __vector_14
+                0x00000000000019e0                __vector_53
+                0x00000000000019e0                __vector_10
+                0x00000000000019e0                __vector_50
+                0x00000000000019e0                __vector_16
+                0x00000000000019e0                __vector_18
+                0x00000000000019e0                __vector_20
+                0x00000000000019e0                __vector_38
 
-.text           0x0000000000002282        0x8
- .text          0x0000000000002282        0x8 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(mulsf3.o)
-                0x0000000000002282                __mulsf3
-
-.text           0x000000000000228a        0x6
- .text          0x000000000000228a        0x6 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libm.a(fp_nan.o)
-                0x000000000000228a                __fp_nan
-
-.text           0x0000000000002290        0x4
- .text          0x0000000000002290        0x4 /Applications/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr6/crtatmega2560.o
-                0x0000000000002290                __vector_42
-                0x0000000000002290                __vector_22
-                0x0000000000002290                __vector_28
-                0x0000000000002290                __vector_1
-                0x0000000000002290                __vector_32
-                0x0000000000002290                __vector_34
-                0x0000000000002290                __vector_24
-                0x0000000000002290                __vector_12
-                0x0000000000002290                __vector_55
-                0x0000000000002290                __vector_46
-                0x0000000000002290                __bad_interrupt
-                0x0000000000002290                __vector_6
-                0x0000000000002290                __vector_31
-                0x0000000000002290                __vector_35
-                0x0000000000002290                __vector_39
-                0x0000000000002290                __vector_3
-                0x0000000000002290                __vector_23
-                0x0000000000002290                __vector_30
-                0x0000000000002290                __vector_45
-                0x0000000000002290                __vector_25
-                0x0000000000002290                __vector_11
-                0x0000000000002290                __vector_54
-                0x0000000000002290                __vector_13
-                0x0000000000002290                __vector_17
-                0x0000000000002290                __vector_19
-                0x0000000000002290                __vector_56
-                0x0000000000002290                __vector_7
-                0x0000000000002290                __vector_49
-                0x0000000000002290                __vector_41
-                0x0000000000002290                __vector_43
-                0x0000000000002290                __vector_27
-                0x0000000000002290                __vector_5
-                0x0000000000002290                __vector_33
-                0x0000000000002290                __vector_47
-                0x0000000000002290                __vector_52
-                0x0000000000002290                __vector_37
-                0x0000000000002290                __vector_4
-                0x0000000000002290                __vector_44
-                0x0000000000002290                __vector_51
-                0x0000000000002290                __vector_9
-                0x0000000000002290                __vector_2
-                0x0000000000002290                __vector_21
-                0x0000000000002290                __vector_15
-                0x0000000000002290                __vector_36
-                0x0000000000002290                __vector_29
-                0x0000000000002290                __vector_40
-                0x0000000000002290                __vector_8
-                0x0000000000002290                __vector_26
-                0x0000000000002290                __vector_48
-                0x0000000000002290                __vector_14
-                0x0000000000002290                __vector_53
-                0x0000000000002290                __vector_10
-                0x0000000000002290                __vector_50
-                0x0000000000002290                __vector_16
-                0x0000000000002290                __vector_18
-                0x0000000000002290                __vector_20
-                0x0000000000002290                __vector_38
-
-.text._Exit     0x0000000000002294        0x4
- .text._Exit    0x0000000000002294        0x4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(_Exit.o)
-                0x0000000000002294                _Exit
+.text._Exit     0x00000000000019e4        0x4
+ .text._Exit    0x00000000000019e4        0x4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(_Exit.o)
+                0x00000000000019e4                _Exit
 
 .text.__dummy_fini
-                0x0000000000002298        0x2
+                0x00000000000019e8        0x2
  .text.__dummy_fini
-                0x0000000000002298        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
-                0x0000000000002298                _fini
+                0x00000000000019e8        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
+                0x00000000000019e8                _fini
 
 .text.__dummy_funcs_on_exit
-                0x000000000000229a        0x2
+                0x00000000000019ea        0x2
  .text.__dummy_funcs_on_exit
-                0x000000000000229a        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
-                0x000000000000229a                __funcs_on_exit
+                0x00000000000019ea        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
+                0x00000000000019ea                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x000000000000229c        0x2
+                0x00000000000019ec        0x2
  .text.__dummy_simulator_exit
-                0x000000000000229c        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
-                0x000000000000229c                __simulator_exit
+                0x00000000000019ec        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(exit.o)
+                0x00000000000019ec                __simulator_exit
 
 .rodata.crc8_table
-                0x0000000000800202      0x100 load address 0x000000000000229e
+                0x0000000000800202      0x100 load address 0x00000000000019ee
  .rodata.crc8_table
                 0x0000000000800202      0x100 build/default/production/main.o
 
-.rodata         0x0000000000800302       0x7e load address 0x000000000000239e
- .rodata        0x0000000000800302       0x7e build/default/production/main.o
+.rodata         0x0000000000800302       0x84 load address 0x0000000000001aee
+ .rodata        0x0000000000800302       0x84 build/default/production/main.o
 
 .rodata.state_table
-                0x0000000000800380       0x16 load address 0x000000000000241c
+                0x0000000000800386       0x16 load address 0x0000000000001b72
  .rodata.state_table
-                0x0000000000800380       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
-
-.rodata         0x0000000000800396       0x10 load address 0x0000000000002432
- .rodata        0x0000000000800396       0x10 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_fp.o)
+                0x0000000000800386       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
 
 .rodata.nuls.2781
-                0x00000000008003a6        0x7 load address 0x0000000000002442
+                0x000000000080039c        0x7 load address 0x0000000000001b88
  .rodata.nuls.2781
-                0x00000000008003a6        0x7 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
+                0x000000000080039c        0x7 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__fmt_s.o)
 
 .rodata.nilstr.2962
-                0x00000000008003ad        0x6 load address 0x0000000000002449
+                0x00000000008003a3        0x6 load address 0x0000000000001b8f
  .rodata.nilstr.2962
-                0x00000000008003ad        0x6 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
+                0x00000000008003a3        0x6 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/libc.a(__printf_core.o)
