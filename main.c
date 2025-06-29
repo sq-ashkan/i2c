@@ -158,13 +158,13 @@ int main(void)
     twi_start(HTU31_ADDRESS << 1); // set zero on lsb Start I2C with write mode
     twi_write(0x54);               // Conversion command: 01010100 (OSR_RH=2, OSR_T=2)
     twi_stop();                    // Stop I2C
-    _delay_ms(60);                 // Wait for conversion to complete
+    _delay_ms(60);                 // Wait for conversion to complete - OSR needs this  =2
 
     // Send read command
     twi_start(HTU31_ADDRESS << 1); // Start I2C with write mode
     twi_write(0x00);               // Read T & RH command
     twi_stop();                    // Stop I2C
-    _delay_ms(1000);               // Small delay before reading
+    _delay_ms(1000);               // Small delay before reading| nicht notig!
 
     // read command
     twi_start((HTU31_ADDRESS << 1) | 1); // Start I2C with read mode // Read temperature and humidity data
