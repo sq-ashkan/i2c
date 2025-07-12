@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="dist/default/production/i2c.production.elf">                 
+  <executable name="dist/default/production/avr.production.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>262144</length>                 
-      <used>7061</used>                     
-      <free>255083</free>                     
+      <used>659</used>                     
+      <free>261485</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 
       <length>8192</length>                 
-      <used>425</used>                     
-      <free>7767</free>                     
+      <used>1</used>                     
+      <free>8191</free>                     
     </memory>                              
   </executable>                            
 </project>                                 

@@ -1,225 +1,64 @@
 #define F_CPU 8000000UL
 #include <avr/io.h>
 #include <util/delay.h>
-#include <stdint.h>
-#include <stdio.h>
-#include "./lcd_text_handler.c"
-#include "./crc8_checker.c"
 
-// TWI Status Macros from Vorlesung
-#define TW_STATUS (TWSR & 0xF8) // Vorlesung slide 24
-#define TW_START 0x08           // 252 full data sheet
-#define TW_REP_START 0x10       // 252 full data sheet
-
-#define TW_MT_SLA_ACK 0x18 // for Adress: Data byte has been transmitted; ACK has been received  // Vorlesung 25
-#define TW_MR_SLA_ACK 0x40 // for Adress: Slave Address has been transmitted; ACK has been received - page 252 full data sheet
-
-#define TW_MT_DATA_ACK 0x28 // for Data: Data byte has been transmitted; ACK has been received // Vorlesung 25
-
-// HTU31 I2C Adresse
-#define HTU31_ADDRESS 0x40     // from data sheet page 8
-#define HTU31_READ_SERIAL 0x0A // from data sheet page 8
-
-int twi_init(void)
+void init_adc(void)
 {
-    TWBR = 0x12;                                       // Bitrate setzen (100kHz) // Formel von Seite: 16
-    TWSR = (0 << TWPS1) | (0 << TWPS0);                // Prescaler-Bits setzen // prescaler 1 means no divider
-    TWDR = 0xFF;                                       // Standardinhalt im Datenregister // need to have vlaue when want to send or recieve data
-    TWCR = (1 << TWEN) |                               // Enable TWI-Interface ;release TWI pins.
-           (0 << TWIE) | (0 << TWINT) |                // Disable Interrupt. / TWINT = interrupt flag will be 1 when done the job / TWIE = interrupt enable
-           (0 << TWEA) | (0 << TWSTA) | (0 << TWSTO) | // No Signal requests. / slave mode ACK  / START condition / STOP condition
-           (0 << TWWC);                                // Collision
-    return 0;
+    // Reference voltage = AVCC (REFS1=0, REFS0=1)
+    ADMUX |= (1 << REFS0);
+    ADMUX &= ~(1 << REFS1);
+
+    // Select ADC0 (PORTF.0) - Clear all MUX bits
+    ADMUX &= ~((1 << MUX0) | (1 << MUX1) | (1 << MUX2) | (1 << MUX3) | (1 << MUX4));
+    ADCSRB &= ~(1 << MUX5);
+
+    // Enable ADC
+    ADCSRA |= (1 << ADEN);
+
+    // Set prescaler = 64 (for 8MHz -> 125kHz ADC clock)
+    ADCSRA &= ~(1 << ADPS0);
+    ADCSRA |= (1 << ADPS1) | (1 << ADPS2);
 }
 
-uint8_t twi_start(uint8_t address)
+uint16_t read_adc(void)
 {
-    uint8_t twst;
+    // Start conversion
+    ADCSRA |= (1 << ADSC);
 
-    // Start Condition
-    TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN); // remove interrupt flag - start condition bit sent - TWEN shoudl be set again so that it stays active!
-    while (!(TWCR & (1 << TWINT)))
+    // Wait for conversion to complete
+    while (ADCSRA & (1 << ADSC))
         ;
 
-    // Check Status
-    twst = TW_STATUS;
-    if ((twst != TW_START) && (twst != TW_REP_START)) // Check START/REP_START
-        return 1;
-
-    // Send Address
-    TWDR = address;
-    TWCR = (1 << TWINT) | (1 << TWEN); // after this line data will be sent TWINT on one!
-    while (!(TWCR & (1 << TWINT)))
-        ;
-
-    // Check Status
-    twst = TW_STATUS;
-    if ((twst != TW_MT_SLA_ACK) && (twst != TW_MR_SLA_ACK)) // we check both of them because we dont know what is the adress lsb -> it should hanld ethe both formats
-        return 1;
-    return 0; // Success
+    // Return ADC result (0-1023)
+    return ADCW;
 }
 
-void twi_write(uint8_t data)
-{
-    TWDR = data;
-    TWCR = (1 << TWINT) | (1 << TWEN); // remove interrupt flag - TWEN shoudl be set again so that it stays active!
-    while (!(TWCR & (1 << TWINT)))
-        ;
-}
-
-uint8_t twi_read_ack(void)
-{
-    TWCR = (1 << TWINT) | // Clear interrupt flag
-           (1 << TWEN) |  // Keep TWI enabled
-           (1 << TWEA);   // Send ACK
-    while (!(TWCR & (1 << TWINT)))
-        ;
-    return TWDR;
-}
-
-uint8_t twi_read_nack(void)
-{
-    TWCR = (1 << TWINT) | // Clear interrupt flag
-           (1 << TWEN) |  // Keep TWI enabled
-           (TWEA << 0);   // No ACK (NACK)
-    while (!(TWCR & (1 << TWINT)))
-        ;
-    return TWDR;
-}
-
-void twi_stop(void)
-{
-    TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWSTO);
-    while (TWCR & (1 << TWSTO))
-        ;
-}
-
-// HTU31 Serial Number lesen (32-bit)
-uint32_t read_htu31_serial_number_with_crc(void)
-{
-    uint32_t serial_number = 0;
-    uint8_t data[4];
-
-    // Command senden
-    twi_start(HTU31_ADDRESS << 1); // Write LSB set zero means write | shift to left // s 8 data sheet
-    twi_write(HTU31_READ_SERIAL);  // 0x0A command
-    twi_stop();                    // make bus free and connection finished sign
-
-    _delay_ms(60); // Warten für Sensor bereitet den Serial number vor!
-
-    // Serial Number lesen (4 bytes)
-    twi_start((HTU31_ADDRESS << 1) | 1); // Read
-    data[0] = twi_read_ack();            // MSB // First Byte of Serial
-    data[1] = twi_read_ack();            // Second Byte of Serial
-    data[2] = twi_read_ack();            // third Byte of Serial
-    data[3] = twi_read_nack();           // LSB with NACK // CRC
-    twi_stop();
-
-    // Combine to 32-bit number
-    serial_number = ((uint32_t)data[0] << 24) |
-                    ((uint32_t)data[1] << 16) |
-                    ((uint32_t)data[2] << 8) |
-                    data[3];
-
-    return serial_number;
+void variable_delay(uint16_t adc_value) {
+    switch(adc_value >> 8) {  // Divide by 256 using bit shift
+        case 0: _delay_ms(100); break;  // Fast
+        case 1: _delay_ms(300); break;  // Medium
+        case 2: _delay_ms(600); break;  // Slow
+        default: _delay_ms(900); break; // Very slow
+    }
 }
 
 int main(void)
 {
-    char buffer[32];
-
-    // Initialize TWI/I2C interface
-    twi_init();
-    _delay_ms(100);
-
-    // *****
-    // Task one: Serial Number lesen
-    // *****
-    uint32_t full_data = read_htu31_serial_number_with_crc();
-    uint32_t serial_number = full_data >> 8; // Extract 24-bit serial number
-    uint8_t crc_received = full_data & 0xFF; // Extract CRC byte
-
-    sprintf(buffer, "SN: %lu", serial_number); // Format serial number for display
-    lcd_text_handler(buffer);                  // Show on LCD
-    _delay_ms(3000);                           // Wait 3 seconds
-
-    // *****
-    // Task Two: CRC Check
-    // *****
-    uint8_t calculated_crc = crc8_calculate_serial(serial_number, 3); // Calculate CRC for 3 bytes
-    calculated_crc == crc_received ? lcd_text_handler("CRC OK") : lcd_text_handler("CRC failed");
-    _delay_ms(2000); // Wait 2 seconds
-
-    // *****
-    // Task Three: Temperature and Humidity Reading
-    // *****
-
-    // Send conversion command with OSR=2 for both T and RH
-    twi_start(HTU31_ADDRESS << 1); // set zero on lsb Start I2C with write mode
-    twi_write(0x54);               // Conversion command: 01010100 (OSR_RH=2, OSR_T=2)
-    twi_stop();                    // Stop I2C
-    _delay_ms(60);                 // Wait for conversion to complete - OSR needs this  =2
-
-    // Send read command
-    twi_start(HTU31_ADDRESS << 1); // Start I2C with write mode
-    twi_write(0x00);               // Read T & RH command
-    twi_stop();                    // Stop I2C
-    _delay_ms(1000);               // Small delay before reading| nicht notig!
-
-    // read command
-    twi_start((HTU31_ADDRESS << 1) | 1); // Start I2C with read mode // Read temperature and humidity data
-
-    uint8_t temp_msb = twi_read_ack(); // Temperature high byte
-    uint8_t temp_lsb = twi_read_ack(); // Temperature low byte
-    uint8_t temp_crc = twi_read_ack(); // Temperature CRC
-
-    uint8_t hum_msb = twi_read_ack();  // Humidity high byte
-    uint8_t hum_lsb = twi_read_ack();  // Humidity low byte
-    uint8_t hum_crc = twi_read_nack(); // Humidity CRC (last byte with NACK)
-
-    twi_stop(); // Stop I2C
-
-    // Combine bytes to 16-bit values
-    uint16_t temp_raw = ((uint16_t)temp_msb << 8) | temp_lsb; // Combine temperature bytes
-    uint16_t hum_raw = ((uint16_t)hum_msb << 8) | hum_lsb;    // Combine humidity bytes
-
-    sprintf(buffer, "T_RAW: %u", temp_raw);
-    lcd_text_handler(buffer);
-    _delay_ms(2000);
-
-    sprintf(buffer, "H_RAW: %u", hum_raw);
-    lcd_text_handler(buffer);
-    _delay_ms(2000);
-
-    // Check temperature CRC
-    uint8_t temp_data[2] = {temp_msb, temp_lsb};
-    uint8_t calc_temp_crc = crc8_calculate(temp_data, 2);
-    calc_temp_crc == temp_crc ? lcd_text_handler("Temp CRC: OK") : lcd_text_handler("Temp CRC: FAIL");
-    _delay_ms(2000);
-
-    // Check humidity CRC
-    uint8_t hum_data[2] = {hum_msb, hum_lsb};
-    uint8_t calc_hum_crc = crc8_calculate(hum_data, 2);
-    calc_hum_crc == hum_crc ? lcd_text_handler("Hum CRC: OK") : lcd_text_handler("Hum CRC: FAIL");
-    _delay_ms(2000);
-
-    // // Apply conversion formulas from datasheet
-    float temperature = -40.0 + (165.0 * temp_raw / 65535.0); // T = -40 + 165 * ST / (2^16 - 1)
-    float humidity = 100.0 * hum_raw / 65535.0;               // RH = 100 * SRH / (2^16 - 1)
-
-    // // Display temperature
-    int temp_int = (int)temperature;
-    int temp_dec = (int)((temperature - temp_int) * 100);
-    sprintf(buffer, "Temp: %d.%02d C", temp_int, temp_dec); // Format temperature with 2 decimal places
-    lcd_text_handler(buffer);                               // Show on LCD
-    _delay_ms(2000);                                        // Wait 2 seconds
-
-    // // Display humidity
-    int hum_int = (int)humidity;
-    int hum_dec = (int)((humidity - hum_int) * 100);
-    sprintf(buffer, "Hum: %d.%02d %%", hum_int, hum_dec); // Format humidity with 2 decimal places
-    lcd_text_handler(buffer);                             // Show on LCD
-    _delay_ms(2000);                                      // Wait 2 seconds
-
+    DDRC = 0xFF;
+    PORTC = 0xFF;
+    init_adc(); // Initialize ADC
+    uint8_t pattern = 0x01;
+    while (1)
+    {
+        uint16_t pot_value = read_adc(); // Read potentiometer
+        PORTC = ~pattern;          // Turn on current LED
+        variable_delay(pot_value); // Variable delay based on pot
+        pattern <<= 1; // Shift to next LED position
+        if (pattern == 0x00)
+        {
+            pattern = 0x01; // Reset to first LED
+        }
+        PORTC = 0xFF; // Turn off all LEDs when button released
+    }
     return 0;
 }
