@@ -1,64 +1,101 @@
 #define F_CPU 8000000UL
 #include <avr/io.h>
-#include <util/delay.h>
+#include <avr/interrupt.h>
 
-void init_adc(void)
+// Global variables accessible by interrupts
+volatile uint8_t light_active = 0;      // Flag to control if light should run
+volatile uint8_t pattern = 0x01;        // Current LED pattern (starts with first LED)
+volatile uint16_t timer_reload = 15625; // Timer reload value for 1Hz (adjustable speed)
+
+void init_timer1(void)
 {
-    // Reference voltage = AVCC (REFS1=0, REFS0=1)
-    ADMUX |= (1 << REFS0);
-    ADMUX &= ~(1 << REFS1);
+    // Clear Timer1 control registers to start fresh
+    TCCR1A = 0;
 
-    // Select ADC0 (PORTF.0) - Clear all MUX bits
-    ADMUX &= ~((1 << MUX0) | (1 << MUX1) | (1 << MUX2) | (1 << MUX3) | (1 << MUX4));
-    ADCSRB &= ~(1 << MUX5);
+    // Configure Timer1 in CTC mode with prescaler 1024
+    TCCR1B = (1 << WGM12) | (1 << CS12) | (1 << CS10); // CTC mode, prescaler 1024
 
-    // Enable ADC
-    ADCSRA |= (1 << ADEN);
+    // Set compare value for desired timing interval
+    OCR1A = timer_reload;
 
-    // Set prescaler = 64 (for 8MHz -> 125kHz ADC clock)
-    ADCSRA &= ~(1 << ADPS0);
-    ADCSRA |= (1 << ADPS1) | (1 << ADPS2);
+    // Enable Timer1 Compare A interrupt
+    TIMSK1 = (1 << OCIE1A);
 }
 
-uint16_t read_adc(void)
+void init_ext_int(void)
 {
-    // Start conversion
-    ADCSRA |= (1 << ADSC);
+    // Configure INT2 (PORTD pin 2, S2) for falling edge detection
+    EICRA |= (1 << ISC21);  // Set ISC21 = 1
+    EICRA &= ~(1 << ISC20); // Clear ISC20 = 0 (falling edge)
 
-    // Wait for conversion to complete
-    while (ADCSRA & (1 << ADSC))
-        ;
+    // Configure INT3 (PORTD pin 3, S1) for falling edge detection
+    EICRA |= (1 << ISC31);  // Set ISC31 = 1
+    EICRA &= ~(1 << ISC30); // Clear ISC30 = 0 (falling edge)
 
-    // Return ADC result (0-1023)
-    return ADCW;
+    // Enable both external interrupts
+    EIMSK |= (1 << INT2) | (1 << INT3);
 }
 
-void variable_delay(uint16_t adc_value) {
-    switch(adc_value >> 8) {  // Divide by 256 using bit shift
-        case 0: _delay_ms(100); break;  // Fast
-        case 1: _delay_ms(300); break;  // Medium
-        case 2: _delay_ms(600); break;  // Slow
-        default: _delay_ms(900); break; // Very slow
+// Timer1 Compare A interrupt - handles LED timing automatically
+ISR(TIMER1_COMPA_vect)
+{
+    // Only update LEDs if light is active
+    if (light_active)
+    {
+        // Turn on current LED (invert pattern because LEDs are active low)
+        PORTC = ~pattern;
+
+        // Shift pattern to next LED position
+        pattern <<= 1;
+
+        // Reset pattern to first LED when all 8 LEDs have been used
+        if (pattern == 0x00)
+        {
+            pattern = 0x01;
+        }
     }
+}
+
+// External interrupt for S1 button - turns light sequence ON
+ISR(INT3_vect)
+{
+    // Set flag to start light sequence
+    light_active = 1;
+}
+
+// External interrupt for S2 button - turns light sequence OFF
+ISR(INT2_vect)
+{
+    // Clear flag to stop light sequence
+    light_active = 0;
+
+    // Immediately turn off all LEDs
+    PORTC = 0xFF;
 }
 
 int main(void)
 {
+    // Configure PORTC as output for LEDs
     DDRC = 0xFF;
+
+    // Initialize all LEDs to OFF state (active low, so 0xFF = all off)
     PORTC = 0xFF;
-    init_adc(); // Initialize ADC
-    uint8_t pattern = 0x01;
+
+    // Initialize Timer1 for automatic LED timing
+    init_timer1();
+
+    // Initialize external interrupts for button handling
+    init_ext_int();
+
+    // Enable global interrupts to start interrupt system
+    sei();
+
+    // Main loop does nothing - everything is handled by interrupts
     while (1)
     {
-        uint16_t pot_value = read_adc(); // Read potentiometer
-        PORTC = ~pattern;          // Turn on current LED
-        variable_delay(pot_value); // Variable delay based on pot
-        pattern <<= 1; // Shift to next LED position
-        if (pattern == 0x00)
-        {
-            pattern = 0x01; // Reset to first LED
-        }
-        PORTC = 0xFF; // Turn off all LEDs when button released
+        // CPU is free to do other tasks or enter sleep mode
+        // All LED control is managed by hardware interrupts
     }
+
     return 0;
 }
